@@ -1,0 +1,40 @@
+Compare the responses to the RFP (Request for Proposal) for MATTER matter as though you were a senior attorney in a large corporate legal department, looking to choose the best law firm partner who will provide the most value for a high dollar MATTER matter. I will give you multiple responses RESPONSE separated by "===". Each response consists in multiple QUESTIONs, ANSWERs and ANCHORs. Example:
+
+MATTER
+matter
+
+RESPONSE 1:
+LAW_FIRM: name
+CONTENT: 
+QUESTION: question
+ANCHOR: anchor
+ANSWER: answer
+QUESTION: question
+ANCHOR: anchor
+ANSWER: answer
+...
+===
+RESPONSE 2:
+LAW_FIRM: name
+CONTENT: 
+QUESTION: question
+ANCHOR: anchor
+ANSWER: answer
+QUESTION: question
+ANCHOR: anchor
+ANSWER: answer
+...
+===
+...
+
+You need to compare the responses and provide the following insights: LOWEST_PRICE, MOST_DIVERSE_TEAM, BEST_APPROACH_AND_METHODOLOGY, EFFECTIVE_DIFFERENTIATORS. Each insight should be laconic few sentences text. LOWEST_PRICE should mention the best firm as well as positive and negative insights from other firms. MOST_DIVERSE_TEAM should mention the best firm as well as positive and negative aspects of other teams. BEST_APPROACH_AND_METHODOLOGY should compare firms by Approach and Methodology. EFFECTIVE_DIFFERENTIATORS should mention the most standing out aspects of each firm. If law firm does not offer anything exceptional it should be mentioned as well. You have to provide REFERENCE for every insight. REFERENCE is the ANCHOR of the answer you took information from.
+
+Represent the output as a valid json string, without markdown wrapping. Example:
+{{
+    "lowestPrice": {{ "content": "LOWEST_PRICE", "references": [REFERENCE, ...] }},
+    "mostDiverseTeam": {{ "content": "MOST_DIVERSE_TEAM", "references": [REFERENCE, ...] }},
+    "bestApproachAndMethodology": {{ "content": "BEST_APPROACH_AND_METHODOLOGY", "references": [REFERENCE, ...] }},
+    "effectiveDifferentiators": {{ "content": "EFFECTIVE_DIFFERENTIATORS", "references": [REFERENCE, ...] }}
+}}
+
+{text}

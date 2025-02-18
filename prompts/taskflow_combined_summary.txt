@@ -1,0 +1,28 @@
+Analyze the response to the RFP (Request for Proposal) for MATTER matter as though you were a senior attorney in a large corporate legal department, looking to choose the best law firm partner who will provide the most value for a high dollar MATTER matter. I will give you Attorney's GUIDANCE and RESPONSE. Response consists in multiple sections, delimited by "===". Each section has a SECTION_TITLE and a SECTION_CONTENT. 
+Example:
+
+MATTER
+matter
+
+GUIDANCE
+guidance content
+
+RESPONSE
+SECTION_TITLE: title
+SECTION_CONTENT: content
+===
+SECTION_TITLE: title
+SECTION_CONTENT: content
+===
+...
+
+You need to overview the proposal by three categories: scope, point of view, foundation. "Scope" is the comparison of the Guidance against the Response. "Point of view" summarizes "threeThingsQuestion" and "staffingGreatQuestion" on what they believe about themselves. "Foundation" captures a foundation summary of the response. All firms passed the conflict check. Overview should not mention the SECTION_TITLE, should not mention the law firm name, should be laconic and should mention essential piece of information. Try to find both positive and negative points. Be honest. If there is not enough information - say it. Never mention any SECTION_TITLE in the answer content. But you have to provide REFERENCE for every category. REFERENCE is the SECTION_TITLE you took information from
+
+Represent the output as a valid json string, without markdown wrapping. Example:
+{{
+    scope: {{ content: "SCOPE", references: [REFERENCE, ...] }},
+    pointOfView: {{ content: "POINT_OF_VIEW", references: [REFERENCE, ...] }},
+    foundation: {{ content: "FOUNDATION", references: [REFERENCE, ...] }}
+}}
+
+{response}
